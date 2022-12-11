@@ -143,6 +143,8 @@ func mapResponseEndBlock(reb *abci.ResponseEndBlock) (*pbcosmos.ResponseEndBlock
 }
 
 func mapConsensusParams(cp *abci.ConsensusParams) *pbcosmos.ConsensusParams {
+	// print the consensus params
+	fmt.Printf("ConsensusParams: %+v", cp);
 	return &pbcosmos.ConsensusParams{
 		Block: &pbcosmos.BlockParams{
 			MaxBytes: cp.Block.MaxBytes,
